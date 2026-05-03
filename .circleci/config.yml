@@ -1,0 +1,23 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: cimg/node:20.11-browsers
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Start local web server
+          command: npx http-server . -p 8080
+          background: true
+      - run:
+          name: Run Playwright test
+          command: npm test
+
+workflows:
+  test-app:
+    jobs:
+      - test

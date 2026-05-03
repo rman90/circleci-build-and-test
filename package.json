@@ -1,0 +1,14 @@
+{
+  "name": "circleci-support-challenge",
+  "version": "1.0.0",
+  "description": "Simple web app and test for the CircleCI Support Engineer technical challenge.",
+  "main": "index.html",
+  "scripts": {
+    "test": "playwright test",
+    "serve": "http-server . -p 8080"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "http-server": "^14.1.1"
+  }
+}

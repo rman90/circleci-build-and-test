@@ -9,6 +9,9 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
+       - run:
+          name: Install Playwright browsers
+          command: npx playwright install
       - run:
           name: Start local web server
           command: npx http-server . -p 8080

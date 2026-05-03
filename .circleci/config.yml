@@ -1,15 +1,15 @@
-version: 2.1
+  version: 2.1
 
-jobs:
-  test:
-    docker:
-      - image: cimg/node:20.11-browsers
-    steps:
+  jobs:
+    test:
+      docker:
+        - image: cimg/node:20.11-browsers
+      steps:
       - checkout
       - run:
           name: Install dependencies
           command: npm install
-       - run:
+      - run:
           name: Install Playwright browsers
           command: npx playwright install
       - run:
@@ -20,7 +20,7 @@ jobs:
           name: Run Playwright test
           command: npm test
 
-workflows:
-  test-app:
-    jobs:
-      - test
+  workflows:
+    test-app:
+      jobs:
+        - test

@@ -28,5 +28,5 @@ CircleCI runs the Playwright test using `.circleci/config.yml`.
 Passing build URL:
 
 ```text
-https://github.com/rman90/circleci-build-and-test.git
+https://app.circleci.com/pipelines/github/rman90/circleci-build-and-test/4
 ```
